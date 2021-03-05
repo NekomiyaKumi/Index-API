@@ -21,11 +21,36 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       {
         "name": "nekoindex",
         "reference": "workspace:."
+      },
+      {
+        "name": "index-assets-fetcher",
+        "reference": "workspace:packages/index-assets-fetcher"
+      },
+      {
+        "name": "index-assets-operater",
+        "reference": "workspace:packages/index-assets-operater"
+      },
+      {
+        "name": "index-channel-trigger",
+        "reference": "workspace:packages/index-channel-trigger"
+      },
+      {
+        "name": "index-kanban-operater",
+        "reference": "workspace:packages/index-kanban-operater"
+      },
+      {
+        "name": "index-kv-operater",
+        "reference": "workspace:packages/index-kv-operater"
       }
     ],
     "enableTopLevelFallback": true,
     "ignorePatternData": "(^(?:\\.yarn\\/sdks(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)|$))$)",
     "fallbackExclusionList": [
+      ["index-assets-fetcher", ["workspace:packages/index-assets-fetcher"]],
+      ["index-assets-operater", ["workspace:packages/index-assets-operater"]],
+      ["index-channel-trigger", ["workspace:packages/index-channel-trigger"]],
+      ["index-kanban-operater", ["workspace:packages/index-kanban-operater"]],
+      ["index-kv-operater", ["workspace:packages/index-kv-operater"]],
       ["nekoindex", ["workspace:."]]
     ],
     "fallbackPool": [
@@ -39,6 +64,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["eslint", "npm:7.21.0"],
             ["eslint-config-standard", "virtual:fba6a707063c4ece6636ba6b0f95a1344aeb0bf8f5e7f6b910389580264ec5a7724c19cb9c31c88f4a5a0da2b2ff919b948de99669a5cd099957b7c75f7163e3#npm:16.0.2"],
+            ["eslint-import-resolver-node", "npm:0.3.4"],
             ["eslint-plugin-import", "virtual:fba6a707063c4ece6636ba6b0f95a1344aeb0bf8f5e7f6b910389580264ec5a7724c19cb9c31c88f4a5a0da2b2ff919b948de99669a5cd099957b7c75f7163e3#npm:2.22.1"],
             ["eslint-plugin-node", "virtual:fba6a707063c4ece6636ba6b0f95a1344aeb0bf8f5e7f6b910389580264ec5a7724c19cb9c31c88f4a5a0da2b2ff919b948de99669a5cd099957b7c75f7163e3#npm:11.1.0"],
             ["eslint-plugin-promise", "npm:4.3.1"]
@@ -1058,6 +1084,51 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["index-assets-fetcher", [
+        ["workspace:packages/index-assets-fetcher", {
+          "packageLocation": "./packages/index-assets-fetcher/",
+          "packageDependencies": [
+            ["index-assets-fetcher", "workspace:packages/index-assets-fetcher"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["index-assets-operater", [
+        ["workspace:packages/index-assets-operater", {
+          "packageLocation": "./packages/index-assets-operater/",
+          "packageDependencies": [
+            ["index-assets-operater", "workspace:packages/index-assets-operater"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["index-channel-trigger", [
+        ["workspace:packages/index-channel-trigger", {
+          "packageLocation": "./packages/index-channel-trigger/",
+          "packageDependencies": [
+            ["index-channel-trigger", "workspace:packages/index-channel-trigger"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["index-kanban-operater", [
+        ["workspace:packages/index-kanban-operater", {
+          "packageLocation": "./packages/index-kanban-operater/",
+          "packageDependencies": [
+            ["index-kanban-operater", "workspace:packages/index-kanban-operater"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["index-kv-operater", [
+        ["workspace:packages/index-kv-operater", {
+          "packageLocation": "./packages/index-kv-operater/",
+          "packageDependencies": [
+            ["index-kv-operater", "workspace:packages/index-kv-operater"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
       ["inflight", [
         ["npm:1.0.6", {
           "packageLocation": "./.yarn/cache/inflight-npm-1.0.6-ccedb4b908-17c53fc42c.zip/node_modules/inflight/",
@@ -1388,6 +1459,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["nekoindex", "workspace:."],
             ["eslint", "npm:7.21.0"],
             ["eslint-config-standard", "virtual:fba6a707063c4ece6636ba6b0f95a1344aeb0bf8f5e7f6b910389580264ec5a7724c19cb9c31c88f4a5a0da2b2ff919b948de99669a5cd099957b7c75f7163e3#npm:16.0.2"],
+            ["eslint-import-resolver-node", "npm:0.3.4"],
             ["eslint-plugin-import", "virtual:fba6a707063c4ece6636ba6b0f95a1344aeb0bf8f5e7f6b910389580264ec5a7724c19cb9c31c88f4a5a0da2b2ff919b948de99669a5cd099957b7c75f7163e3#npm:2.22.1"],
             ["eslint-plugin-node", "virtual:fba6a707063c4ece6636ba6b0f95a1344aeb0bf8f5e7f6b910389580264ec5a7724c19cb9c31c88f4a5a0da2b2ff919b948de99669a5cd099957b7c75f7163e3#npm:11.1.0"],
             ["eslint-plugin-promise", "npm:4.3.1"]
