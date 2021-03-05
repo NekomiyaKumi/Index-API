@@ -1,3 +1,19 @@
 {
-  "name": "index-kv-operater"
+  "name": "index-kv-operater",
+  "version": "0.0.1",
+  "description": "Cloudflare Workers' KV Operater for NekoIndex.",
+  "main": "src/main.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NekomiyaKumi/Index-API.git",
+    "directory": "/packages/index-kv-operater"
+  },
+  "author": {
+    "name": "Orwill Q. Song",
+    "email": "orwill@anislet.dev"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NekomiyaKumi/Index-API/issues"
+  }
 }
